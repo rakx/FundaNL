@@ -1,0 +1,32 @@
+﻿@model IEnumerable<FundaNLTask.Models.PropertyDetails>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>RealEstate Agent List</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RealEstateAgentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PropertyCount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RealEstateAgentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PropertyCount)
+        </td>        
+    </tr>
+}
+</table>
+
